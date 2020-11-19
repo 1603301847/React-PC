@@ -1,0 +1,30 @@
+{
+  "id": "2018428",
+  "name": "登录页面",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1977039",
+      "name": "相机",
+      "font_class": "xiangji",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "1203037",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "6957050",
+      "name": "用户",
+      "font_class": "new-yonghu",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    }
+  ]
+}

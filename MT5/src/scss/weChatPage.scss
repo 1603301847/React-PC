@@ -1,0 +1,287 @@
+.mt-weChat-page {
+    .mt-weChat-interface {
+        width: 375px;
+        height: 667px;
+        margin: auto;
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(55, 55, 55, .6);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .mt-weChat-status-bar {
+            height: 20px;
+            background-color: #000;
+        }
+
+        .mt-weChat-header {
+            height: 44px;
+            background-color: #222A2D;
+
+            .mt-weChat-header-name {
+                color: #fff;
+                font-size: 20px;
+                line-height: 44px;
+                padding-left: 15px;
+            }
+
+            .mt-weChat-header-ipt {
+                border: 0;
+                outline: 0;
+                margin-left: 15px;
+            }
+
+            .mt-weChat-header-add {
+                width: 43px;
+                float: right;
+                cursor: pointer;
+                text-align: center;
+
+                &:hover {
+                    background-color: #131212;
+                }
+            }
+
+            .mt-weChat-header-search {
+                width: 43px;
+                float: right;
+                cursor: pointer;
+                text-align: center;
+
+                &:hover {
+                    background-color: #131212;
+                }
+            }
+
+        }
+
+        .mt-weChat-content {
+            width: 375px;
+            height: 553px;
+            background-color: #fff;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            overflow: hidden;
+
+            .mt-weChat-content-list {
+                width: 1500px;
+                height: 553px;
+                transition: all .6s;
+
+                .mt-weChat-content-list-con {
+                    width: 375px;
+                    height: 100%;
+                    float: left;
+                }
+
+                .mt-weChat-news {
+                    width: 375px;
+                    height: 64px;
+                    border-bottom: 1px solid #ccc;
+
+                    &:hover {
+                        background-color: #f3f3f378;
+                    }
+
+                    .mt-weChat-badge {
+                        position: relative;
+                        display: inline-block;
+
+                        .mt-weChat-avatar {
+                            display: inline-block;
+                            width: 45px;
+                            height: 45px;
+                            background-color: lightpink;
+                            // position: absolute;
+                            // top: 9px;
+                            // left: 15px;
+                            margin-top: 9px;
+                            margin-left: 15px;
+                            // z-index: 1;
+                        }
+
+                        .mt-weChat-badge-count {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            background-color: #ed4014;
+                            color: #fff;
+                            text-align: center;
+                            line-height: 20px;
+                            position: relative;
+                            font-size: 8px;
+                            right: 10px;
+                            bottom: 37px;
+                            // left: 45px;
+                            // z-index: 2;
+                        }
+                    }
+
+                    .mt-weChat-contact-news {
+                        // padding-left: 80px;
+                        position: relative;
+                        bottom: 5px;
+                        width: 290px;
+                        cursor: pointer;
+                        display: inline-block;
+
+                        .mt-weChat-contact-name {
+                            color: #000;
+                            font-size: 16px;
+                        }
+
+                        .mt-weChat-contact-msg {
+                            display: block;
+                            color: #19BE6B;
+                            font-size: 12px;
+                        }
+
+                        .mt-weChat-contact-time {
+                            position: absolute;
+                            right: 15px;
+                            top: 0;
+                        }
+
+                        .mt-weChat-contact-topping {
+                            position: absolute;
+                            right: 40px;
+                            bottom: 0;
+                            cursor: pointer;
+                            color: pink;
+
+                            &:hover {
+                                color: plum;
+                            }
+                        }
+
+                        .mt-weChat-contact-close {
+                            position: absolute;
+                            right: 15px;
+                            bottom: 0;
+                            cursor: pointer;
+
+                            .mt-weChat-contact-del {
+                                font-size: 12px;
+
+                                &:hover {
+                                    color: #ed4014;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .mt-weChat-footer {
+            width: 375px;
+            height: 50px;
+            background-color: #F3F3F3;
+            border-top: 1px solid #ccc;
+            display: flex;
+            position: relative;
+            bottom: 0;
+            z-index: 1;
+
+            .mt-weChat-footer-content {
+                flex: 1;
+                text-align: center;
+                cursor: pointer;
+
+                &.select {
+                    color: #19BE6B;
+                }
+
+
+                .mt-weChat-footer-text {
+                    display: block;
+                    font-size: 12px;
+                }
+            }
+
+        }
+
+        .mt-weChat-popup {
+            width: 300px;
+            height: 250px;
+            border-radius: 5px;
+            background-color: #fff;
+            z-index: 4;
+            position: fixed;
+            top: 200px;
+            left: 45%;
+
+            .mt-weChat-popup-close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                color: #999;
+                cursor: pointer;
+                z-index: 1;
+                font-size: 12px;
+
+                &:hover {
+                    color: #ed4014;
+                }
+            }
+
+            .mt-weChat-popup-con {
+                text-align: right;
+                // margin-top: 200px;
+
+                .mt-weChat-popup-form {
+                    margin-right: 50px;
+                    margin-top: 40px;
+
+                    p {
+                        width: 100%;
+                        height: 40px;
+                    }
+
+                    input {
+                        margin-top: 10px;
+                        border: 1px solid #ccc;
+                        outline: 0;
+                        margin-left: 15px;
+                    }
+
+                    .mt-weChat-popup-time {
+                        display: inline-block;
+                        width: 165px;
+                        height: 25px;
+                        margin-top: 10px;
+                        text-align: left;
+                        margin-left: 5px;
+                    }
+
+                    .inp {
+                        border: 1px solid #ed4014;
+                    }
+
+                    .mt-weChat-popup-sub {
+                        background-color: #1890FF;
+                        width: 100px;
+                        height: 30px;
+                        color: #fff;
+                        text-align: center;
+                        border: 0;
+                        outline: 0;
+                        cursor: pointer;
+                        margin-right: 40px;
+
+                        &:hover {
+                            background-color: #188fffd3;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.mt-modal-page{
+    width: 100%;
+    height: 100%;
+    .mt-show-modal-btn{
+        border: 0;
+        outline: 0;
+        border-radius: 5px;
+        background-color: #2d8cf0;
+        padding: 10px 15px; 
+        color: #fff;
+        cursor: pointer;     
+        &:hover{
+            background-color: #57A3F3;
+            transition: all .6s;
+        }   
+    }
+    .mt-modal-mask{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(55,55,55,.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .mt-modal-wrap{
+        width: 520px;
+        height: 200px;
+        border-radius: 10px;
+        background-color: #fff;
+        position: fixed;
+        top: 100px;
+        left: 50%;
+        transform: translate(-50%);
+        box-shadow: 0 4px 12px rgba(0,0,0,.15);
+        display: none;
+        .mt-modal{
+            width: 100%;
+            height: 100%;
+            .mt-modal-close{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                color: #999;
+                cursor: pointer;
+                z-index: 1;
+                font-size: 12px;
+                &:hover{
+                    color: #515a6e;
+                }
+            }
+            .mt-modal-header{               
+                border-bottom: 1px solid #e8eaec;
+                padding: 14px 16px;
+                .mt-modal-header-inner{
+                    display: inline-block;
+                    width: 100%;
+                    height: 20px;
+                    line-height: 20px;
+                    color: #17233d;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+            .mt-modal-body{
+                padding: 16px;
+                font-size: 14px;
+                border-bottom: 1px solid #e8eaec;
+                p{
+                    margin: 0;
+                    padding: 0;
+                    color: #515a6e;
+                }
+            }
+            .mt-modal-footer{
+                padding: 12px 18px;
+                text-align: right;
+                .mt-modal-cancel-btn{
+                    border: 0;
+                    outline: 0;
+                    border-radius: 5px;
+                    background-color:transparent;
+                    cursor: pointer;
+                    &:hover{
+                        color: #57A3F3;
+                        transition: all .6s;
+                    }       
+                }
+                .mt-modal-determine-btn{
+                    margin-left: 8px;
+                    border: 0;
+                    outline: 0;
+                    border-radius: 5px;
+                    background-color: #2d8cf0;
+                    color: #fff;
+                    cursor: pointer;
+                    padding: 5px 15px; 
+                    &:hover{
+                        background-color: #57A3F3;
+                        transition: all .6s;
+                    }       
+                }
+            }
+        }
+    }
+    .mt-modal-message{
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0,0,0,.15);
+        margin: -100px auto;
+        transition: all .6s;
+        .icon-gantanhao{
+            color: #2d8cf0;
+        }
+        span{
+            margin-left: 5px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.mt-split-page{
+    .mt-split-wrapper{
+        width: 507px;
+        height: 400px;
+        border: 1px solid #DCDEE2;
+        position: relative;
+        // overflow: hidden;
+        .mt-split-left-pane{
+            width: 50%;
+            background-color: beige;
+            height: 100%;
+            float: left;
+            padding: 10px;
+            user-select:none; /**设置禁止文字被选中**/
+        }
+        .mt-split-right-pane{
+            width: 50%;
+            background-color: bisque;
+            height: 100%;
+            float: right;
+            padding: 10px;
+            user-select:none; /**设置禁止文字被选中**/
+        }
+        .mt-split-trigger-con{
+            width: 6px;
+            height: 100%;
+            border-left: 1px solid #dcdee2;
+            border-right: 1px solid #dcdee2;
+            cursor:col-resize;
+            position: absolute;
+            left: 50%;
+            z-index: 1;
+            background-color: #F8F8F9;
+        }
+    }
+}

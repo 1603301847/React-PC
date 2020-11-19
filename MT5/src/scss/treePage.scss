@@ -1,0 +1,112 @@
+.mt-tree-page{
+    .mt-tree{
+        width: 500px;
+        height: auto;
+        .mt-tree-children{
+            list-style-type: none; 
+            margin: 0;
+            padding: 0;
+            .mt-tree-list{
+                margin: 8px 0;
+                .mt-tree-children{
+                    padding: 0 0 0 22px;
+                }
+            }           
+            .mt-tree-arrow {
+                cursor: pointer;
+                .mt-tree-icon{
+                    vertical-align: middle;
+                    display: inline-block;
+                }           
+                &.rotate{
+                    .mt-tree-icon{
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+            .mt-tree-title{         
+                padding: 0 4px;
+                cursor: pointer;
+                user-select:none; 
+                transition: all .2s ease-in-out;
+                &.mt-tree-title-selected{
+                    background-color: #d5e8fc;
+                    display: inline-block;
+                    border-radius: 3px;
+                }
+            }
+            .mt-tree-checkbox-item{
+                margin-left: 8px;
+                margin-right: 4px;
+                .mt-tree-checkbox{
+                    display: inline-block;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    line-height: 1;
+                    position: relative;
+                    .mt-tree-checkbox-inner{
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        border: 1px solid #dcdee2;
+                        border-radius: 2px;
+                        background-color: #fff;
+                    }
+                    
+                    .mt-tree-input{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 1;
+                        cursor: pointer;
+                        opacity: 0;
+                    }
+                    &.checked{
+                        .mt-tree-checkbox-inner{
+                            border-color: #2d8cf0;
+                            background-color: #2d8cf0;
+                        }
+                        .mt-tree-checkbox-inner:after{
+                            content: "";
+                            display: table;
+                            width: 4px;
+                            height: 8px;
+                            position: absolute;
+                            top: 2px;
+                            left: 5px;
+                            border: 2px solid #fff;
+                            border-top: 0;
+                            border-left: 0;
+                            transform: rotate(45deg) scale(1);
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+                    &.indeterminate{
+                        .mt-tree-checkbox-inner{
+                            border-color: #2d8cf0;
+                            background-color: #2d8cf0;
+                        }
+                        .mt-tree-checkbox-inner:after{
+                            content: "";
+                            width: 10px;
+                            height: 1px;
+                            transform: scale(1);
+                            position: absolute;
+                            left: 2px;
+                            top: 6px;
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

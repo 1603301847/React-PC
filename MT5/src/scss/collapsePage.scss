@@ -1,0 +1,76 @@
+.mt-collapse-page{
+    width: 100%;
+    height: 100%;
+    background-color: azure;
+    position: fixed;
+    .mt-collpase-container{
+        width: 561.15px;
+        height: auto;
+        margin: 150px 150px;
+        .mt-ivu-collapse{
+            width: 476.151px;
+            height: auto;
+            border-left: 1px solid #dcdee2;
+            border-right: 1px solid #dcdee2;
+            border-bottom: 1px solid #dcdee2;
+            border-radius: 5px;
+            .mt-ivu-collapse-item{
+                width: 100%;
+                height: auto;
+                border-top: 1px solid #dcdee2;
+                .mt-ivu-collapse-header{
+                    width: 100%;
+                    height: 37.99px;
+                    padding-left: 16px;
+                    line-height: 37.99px;
+                    cursor: pointer;
+                }
+                .mt-ivu-collapse-content{
+                    width: 100%;
+                    height: 0;
+                    overflow: hidden;
+                    padding-right: 16px;
+                    padding-left: 16px;
+                    box-sizing: border-box;
+                    .mt-ivu-collapse-content-box{
+                        width: 100%;
+                        height: auto;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        p{
+                            width: 432.202px;
+                            padding: 0;
+                            margin: 5px;
+                        }
+                    }
+                }
+
+
+                // .auto {
+                //     height: auto;
+                // }
+                // .rotate {
+                //     transform: rotate(90deg);
+                //     display: inline-block;
+                // }
+
+                
+                &.open{
+                    .mt-ivu-collapse-header{
+                        border-bottom: 1px solid #dcdee2;
+                        .iconfont.icon-zhediejiantou{
+                            transform: rotate(90deg);
+                            display: inline-block;
+                        }
+                    }
+                    .mt-ivu-collapse-content{
+                        height: auto;
+                    }
+                }
+            }
+        }
+        
+    }
+   
+    
+}

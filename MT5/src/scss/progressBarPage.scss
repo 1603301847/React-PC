@@ -1,0 +1,62 @@
+.mt-progress-page{
+    .mt-progress{
+        width: 1000px;
+        height: 30px;
+        .mt-progress-outer{
+            display: inline-block;
+            width: 100%;
+            margin-right: -55px;
+            padding-right: 55px;
+            .mt-progress-inner{
+                display: inline-block;
+                width: 100%;
+                height: 10px;
+                background-color: #f3f3f3;
+                border-radius: 100px;
+                vertical-align: middle;
+                position: relative;
+                .mt-progress-bg{
+                    width: 0%;
+                    height: 10px;
+                    background-color: #2d8cf0;
+                    border-radius: 100px;
+                }
+                .success-bg{
+                    width: 100%;
+                    height: 10px;
+                    background-color:#19BE6B;
+                    border-radius: 100px;
+                }
+            }
+        }
+        .mt-progress-text{
+            display: inline-block;
+            margin-left: 5px;
+            text-align: left;
+            font-size: 1em;
+            vertical-align: middle;
+            color: #808695;
+        }
+    }
+    .mt-progress-btn-group{
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        .mt-progress-btn{
+            border: 1px solid transparent;
+            height: 40px;
+            padding: 0 15px;
+            border-radius: 4px;
+            background-color: #fff;
+            border-color: #dcdee2;
+        }
+        .mt-progress-btn:first-child:not(:last-child) {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .mt-progress-btn:last-child:not(:first-child) {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.toggle-dome-page{
+    .toggle-dome-page-container{
+        width: 200px;
+        height: 200px;
+        background: greenyellow;
+
+        padding: 100px 20px 20px 30px;
+        transition: all 1.5s;
+
+
+        .box{
+            margin-right: 10px;
+            float: left;
+            width: 30px;
+            height: 30px;
+            background: indianred;
+            transition: all 1s;
+
+        }
+
+        &.active{
+
+            width: 500px;
+            height: 500px;
+            background: burlywood;
+
+            .box{
+                &.rotate{
+                    width: 100px;
+                    width: 100px;
+                    transform:rotate(45deg);
+                }
+    
+                &.skew{
+                    width: 100px;
+                    width: 100px;               
+                    transform:skew(20deg,20deg);
+                }
+    
+                &.move{
+                    width: 100px;
+                    width: 100px;                    
+                    transform:translateX(60px);
+                }                 
+            }
+        }
+    }
+}

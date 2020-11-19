@@ -1,0 +1,82 @@
+.mt-tabs-page{
+    width: 500px;
+    height: 250px;
+    // background-color: aliceblue;
+    margin: 100px auto;
+    position: relative;
+    .mt-tabs-nav-container{
+        width: 500px;
+        height: 50px;
+        position: relative;
+        .mt-tabs-nav-prev,.mt-tabs-nav-next{
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #fff;
+            cursor: pointer;
+            position: absolute;
+            z-index: 1;
+        }
+        .mt-tabs-nav-prev{
+            left: 0;
+        }
+        .mt-tabs-nav-next{
+            right: 0;
+        }
+        .mt-tabs-nav-scroll{
+            width: 500px;
+            height: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border-bottom: 1px solid #DCDEE2;
+            overflow: hidden;
+            
+            .mt-tabs-ink-bar{
+                width: 500px;
+                height: 50px;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                transition: all .6s;
+                .mt-tabs-ink-bar-list{
+                    float: left;
+                    color: #515a6e;
+                    width: 115px;
+                    height: 50px;
+                    line-height: 50px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    text-align: center;
+                    font-size: 16px;
+                    .iconfont{
+                        padding-right: 5px;
+                    }
+                    &:hover{
+                        color: #2D8CF0;
+                        cursor: pointer;  
+                    }
+                    &.select{
+                        color: #2D8CF0;
+                        border-bottom: 3px solid #2D8CF0;
+                    }
+                }
+            }
+        }
+    }
+    .mt-tabs-content{
+        width: 500px;
+        height: 200px;
+        overflow: hidden;
+        .mt-tabs-content-list{        
+            width: 2000px;
+            height: 200px;
+            transition: all .6s;
+            background-color: aliceblue;
+            .mt-tabs-tabpane{
+                width: 500px;
+                height: 100%;
+                float: left;
+            }
+        }
+    }
+}

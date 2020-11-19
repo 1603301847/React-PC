@@ -1,0 +1,41 @@
+.mt-canvas-page {
+    table {
+        width: 100%;
+        border: 1px solid #e8eaec;
+        height: 300px;
+
+
+        tr {
+            display: flex;
+            text-align: center;
+
+            td {
+                border: 1px solid #e8eaec;
+                flex: 1;
+                padding: 10px;
+
+                span {
+                    width: 80px;
+                    text-align: right;
+                    font-size: 14px;
+                    color: #515a6e;
+                    line-height: 1;
+                    padding: 10px 12px;
+                    box-sizing: border-box;
+                }
+
+                input {
+                    width: 100px;
+                    height: 32px;
+                    line-height: 32px;
+                    padding: 0 7px;
+                    text-align: left;
+                    outline: 0;
+                    color: #666;
+                    border: 1px solid #e8eaec;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}

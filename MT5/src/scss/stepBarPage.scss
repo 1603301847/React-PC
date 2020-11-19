@@ -1,0 +1,142 @@
+.mt-step-page{
+    .mt-step-bar{
+        width: 100%;
+        height: 125px;
+        .mt-steps-horizontal{
+            width: auto;
+            height: 25px;
+            display: flex;
+            margin-bottom: 20px;
+            .mt-steps-item{
+                display: inline-block;
+                flex: 1;
+                position: relative;
+                vertical-align: top;
+                .mt-steps-tail{
+                    display: inline-block;
+                    width: 100%;
+                    padding: 0 10px;
+                    position: absolute;
+                    left: 0;
+                    top: 13px;
+                    i{
+                        display: inline-block;
+                        width: 100%;
+                        height: 1px;
+                        vertical-align: top;
+                        background: #e8eaec;
+                        border-radius: 1px;
+                        position: relative;
+                    }
+                }
+                
+                .mt-steps-head{
+                    display: inline-block;
+                    position: relative;
+                    width: 33px;
+                    height: 33px;
+                    background-color: #fff;
+                    .mt-steps-head-inner{
+                        display: inline-block;
+                        width: 26px;
+                        height: 26px;
+                        line-height: 24px;
+                        margin-right: 8px;
+                        text-align: center;
+                        border: 1px solid #ccc;
+                        border-radius: 50%;
+                        font-size: 14px;
+                        span{
+                            color: #ccc;
+                        }
+                        i:before
+                        {
+                            display: none;
+                        }
+                    }
+                    .mt-steps-head-inner-focus{
+                        display: inline-block;
+                        width: 26px;
+                        height: 26px;
+                        line-height: 24px;
+                        margin-right: 8px;
+                        text-align: center;
+                        border: 1px solid #ccc;
+                        border-radius: 50%;
+                        font-size: 14px;
+                        border-color: #2d8cf0;
+                        background-color: #2d8cf0;
+                        span{
+                            color: #fff;
+                        }
+                        i:before
+                        {
+                            display: none;
+                        }
+                    }
+                }
+                
+                .mt-steps-main{
+                    display: inline-block;
+                    position: absolute;
+                    color: #666;
+                    margin-bottom: 4px;
+                    padding-right: 10px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    vertical-align: top;
+                    background-color: #fff;
+                }
+                
+                }.steps-status-finish{
+                    .mt-steps-tail{
+                        display: inline-block;
+                        width: 100%;
+                        padding: 0 10px;
+                        position: absolute;
+                        left: 0;
+                        top: 13px;
+                        i{
+                            display: inline-block;
+                            width: 100%;
+                            height: 1px;
+                            vertical-align: top;
+                            background-color: #2d8cf0;
+                            border-radius: 1px;
+                            position: relative;
+                        }
+                    }
+                    .mt-steps-head{
+                        display: inline-block;
+                        position: relative;
+                        width: 33px;
+                        height: 33px;
+                        background-color: #fff;
+                        .mt-steps-head-inner{
+                            display: inline-block;
+                            width: 26px;
+                            height: 26px;
+                            line-height: 24px;
+                            margin-right: 8px;
+                            text-align: center;
+                            border-color: #2d8cf0;
+                            border-radius: 50%;
+                            font-size: 14px;
+                            span{
+                                display: none;
+                            }
+                            i:before{
+                                    display: block;
+                            }
+                        }                        
+                    }
+                 }
+            }
+            .mt-steps-item:last-child{
+                .mt-steps-tail{
+                    display: none;
+                }
+            }
+        }
+    
+}
