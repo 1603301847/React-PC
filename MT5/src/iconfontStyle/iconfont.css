@@ -170,6 +170,20 @@
   url('//at.alicdn.com/t/font_2160452_tkke2rpv46k.svg?t=1604049792676#iconfont') format('svg'); /* iOS 4.1- */
 }
 
+@font-face {
+  font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_2219739_iazsd2gjm6a.eot?t=1605952885270');
+  /* IE9 */
+  src: url('//at.alicdn.com/t/font_2219739_iazsd2gjm6a.eot?t=1605952885270#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKkAAsAAAAABmwAAAJaAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgpQbgE2AiQDDAsIAAQgBYRtBzwbugXILrBt2JMSWZy403jYYH+Xg0FJLB7+W2N/38zsoNLUIt1PJ4lGPBQalaSJlkiBbv+XsFdzeQ8sf3xXP6ArsnqUwb2EL3PZFEG5+ipVIYFdVWX7bA2SGapwKeGE6UKHDbgpHQASsUE24HL6E+hB5gG9265tY05dGGAcUKB7YBRZiSToDWMXuITHBLpNakjtbe6PWFFhrQrEvWNprJhLKwqrdQq15mDzEWl0pqc05jn8fvzXq0jSZNbG/csNky1/+1m+aq9y5hMyBHi8QcY6phAXteUjGcG4jG5ntr21KkKaK9eeUNP/8KqKJIjK6u4Fy7CS+OZqqWvQuOtqhrvTR7lnITt6fYhaH6YnR+PT09Hx6eRIgavYfv/BmUPWP2cU3h+pQK0Rf3NVDO0VZK5C0l8EgrfVVjr/xUoBX0cCjH6ddEr01v9OX+WMtf943LRKuaBFdTUYzWqPlQndutEyKz7sZbx37A7qodPYiHiHibuJdppPycKuo9FjA1WnTXRbs3W8xwgpI0oXVt0DhEGPSPp9Ihv0RBb2GY1xv6gGy6DbQVQv7LGYU16TqBGaoB+DY4iQOz4qR70DtBJfk1kz5CcoYycH3VanWNvCEOUcW+IDq0fEgUsRwCZ4Dn1fQCSFiwa1bKJott3mdW9qGSJgZbskpCHIBHTHgMMghLg/mZRLnx9AloRPI1tGasoJJMWc2UFXS6cHueUMe43cyyuxA5YeQjjASUIAbIJ5yOcTQFQ/z4UMpMUeUYzMatvjeF9na3138H2noJt1PEeKHEXHraOFJJJiGOoyBg==') format('woff2'),
+    url('//at.alicdn.com/t/font_2219739_iazsd2gjm6a.woff?t=1605952885270') format('woff'),
+    url('//at.alicdn.com/t/font_2219739_iazsd2gjm6a.ttf?t=1605952885270') format('truetype'),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('//at.alicdn.com/t/font_2219739_iazsd2gjm6a.svg?t=1605952885270#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
@@ -318,13 +332,13 @@
   color: #2d8cf0;
 }
 
-.icon-jiantou-up:before {
-  content: "\e600";
+.icon-jiantou:before {
+  content: "\e621";
   font-size: 1px;
 }
 
-.icon-jiantou-down:before {
-  content: "\e601";
+.icon-jiantou1:before {
+  content: "\e600";
   font-size: 1px;
 }
 

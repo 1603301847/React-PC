@@ -115,7 +115,7 @@ class G6Html7 extends Component {
         graph.render();
     }
     render() {
-        return <div className="mt-G6-page">
+        return <div className="mt-G67-page">
             <div id="mountNode"></div>
         </div>;
     }

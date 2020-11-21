@@ -129,7 +129,7 @@ class G6Html5 extends Component {
         });
     }
     render() {
-        return <div className="mt-G6-page">
+        return <div className="mt-G65-page">
             <select id="selector">
                 <option value="default">默认</option>
                 <option value="addNode">添加节点</option>

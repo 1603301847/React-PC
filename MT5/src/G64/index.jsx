@@ -153,7 +153,7 @@ class G6Html4 extends Component {
 
     }
     render() {
-        return <div className="mt-G6-page">
+        return <div className="mt-G64-page">
             <table>
                 <tbody>
                     <tr>

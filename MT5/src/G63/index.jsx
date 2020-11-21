@@ -60,7 +60,7 @@ class G6Html3 extends Component {
     }
 
     render() {
-        return <div className="mt-G6-page">
+        return <div className="mt-G63-page">
             <div id="mountNode"></div>
         </div>;
     }

@@ -23,8 +23,8 @@ import ProgressBarPage from 'progressBar/index'
 import StepBarPage from 'stepBar/index'
 import SliderPage from 'slider/index'
 import TinyMCEPage from 'TinyMCE/index'
-// import ChartsPage from 'charts/index'
-// import GanttPage from 'gantt/index'
+import ChartsPage from 'charts/index'
+import GanttPage from 'gantt/index'
 import WeChatPage from 'weChat/index'
 import CanvasPage from 'canvas/index'
 import G6Page from 'G6/index'
@@ -126,12 +126,12 @@ class HomeHTML extends Component {
                             <Menu.Item key="19">
                                 <Link to="/TinyMCEPage">tinyMCEPage</Link>
                             </Menu.Item>
-                            {/* <Menu.Item key="20">
+                            <Menu.Item key="20">
                                 <Link to="/ChartsPage">chartsPage</Link>
                             </Menu.Item>
                             <Menu.Item key="21">
                                 <Link to="/GanttPage">ganttPage</Link>
-                            </Menu.Item> */}
+                            </Menu.Item>
                             <Menu.Item key="22">
                                 <Link to="/WeChatPage">weChatPage</Link>
                             </Menu.Item>
@@ -234,12 +234,12 @@ class HomeHTML extends Component {
                         <Route path="/TinyMCEPage">
                             <TinyMCEPage />
                         </Route>
-                        {/* <Route path="/ChartsPage">
+                        <Route path="/ChartsPage">
                             <ChartsPage />
                         </Route>
                         <Route path="/GanttPage">
                             <GanttPage />
-                        </Route> */}
+                        </Route>
                         <Route path="/WeChatPage">
                             <WeChatPage />
                         </Route>
