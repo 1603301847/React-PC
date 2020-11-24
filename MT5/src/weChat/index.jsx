@@ -72,7 +72,7 @@ class weChatHtml extends Component {
                     iconName: '发现',
                 },
                 {
-                    icon: '\ue600',
+                    icon: '\ue500',
                     iconName: '我',
                 }
             ]

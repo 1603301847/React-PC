@@ -8,15 +8,18 @@ class G6Html5 extends Component {
             nodes: [{
                 id: 'node1',
                 x: 100,
-                y: 200
+                y: 200,
+                label: '2111'
             }, {
                 id: 'node2',
                 x: 300,
-                y: 200
+                y: 200,
+                label: '2111'
             }, {
                 id: 'node3',
                 x: 300,
-                y: 300
+                y: 300,
+                label: '2111'
             }],
             edges: [{
                 id: 'edge1',
@@ -68,16 +71,16 @@ class G6Html5 extends Component {
                     });
                 }
             },
-            onEdgeClick(ev) {
-                const currentEdge = ev.item;
-                // 拖拽过程中，点击会点击到新增的边上
-                // eslint-disable-next-line
-                if (this.addingEdge && this.edge == currentEdge) {
-                    graph.removeItem(this.edge);
-                    this.edge = null;
-                    this.addingEdge = false;
-                }
-            }
+            // onEdgeClick(ev) {
+            //     const currentEdge = ev.item;
+            //     // 拖拽过程中，点击会点击到新增的边上
+            //     // eslint-disable-next-line
+            //     if (this.addingEdge && this.edge == currentEdge) {
+            //         graph.removeItem(this.edge);
+            //         this.edge = null;
+            //         this.addingEdge = false;
+            //     }
+            // }
         });
 
         // Register a custom behavior to add node
