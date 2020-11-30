@@ -26,11 +26,11 @@ class G6Html2 extends Component {
                 {
                     id: 'node3',
                     type: 'circle',
-                    x: 1000,
+                    x: 500,
                     y: 200,
                     label: '自定义文本内容',
                     size: 40
-                },
+                }
                 ],
                 // 边集
                 edges: [
@@ -45,6 +45,7 @@ class G6Html2 extends Component {
                         target: 'node3',  // 目标点 id
                         label: '自定义线上内容'   // 边的文本
                     },
+
                 ]
             }
 
@@ -57,11 +58,16 @@ class G6Html2 extends Component {
             container: 'mountNode', // 指定挂载容器
             width: 2000,             // 图的宽度
             height: 500,          // 图的高度
+            selectorTypeText: "circle",
             modes: {
                 default: ['drag-node', 'click-select'],
                 addNode: ['click-add-node', 'click-select'],
                 addEdge: ['click-add-edge', 'click-select'],
-                delNode: ['del-node', 'click-select']
+                delNode: ['del-node', 'click-select'],
+                defaultCircular: 'circlr',
+                // ellipse: ['ellipse', 'click-add-node', 'click-select'],
+                // rect: 'rect',
+                // diamond: ['click-add-node', 'click-select']
             },
             // The node styles in different states
             nodeStateStyles: {
@@ -105,6 +111,7 @@ class G6Html2 extends Component {
                     });
                     this.addingEdge = true;
                 }
+                console.log(ev)
             },
             onMousemove(ev) {
                 const point = {
@@ -144,10 +151,11 @@ class G6Html2 extends Component {
                 // eslint-disable-next-line
                 const graph = this.graph;
                 // eslint-disable-next-line
-                const node = this.graph.addItem('node', {
+                const node = graph.addItem('node', {
                     x: ev.canvasX,
                     y: ev.canvasY,
                     id: `node-${addedCount}`, // 生成唯一的 id
+                    type: graph.cfg.modes.defaultCircular
                 });
                 addedCount++;
             }
@@ -159,15 +167,12 @@ class G6Html2 extends Component {
                 };
             },
             onDblClick(ev) {
-                // eslint-disable-next-line
                 const graph = this.graph;
-                // eslint-disable-next-line
                 const node = ev.item
                 graph.remove(node)
             }
         });
         let list = []
-        // graph.clear();
         //本地缓存没有值就读取数据 有值就读取本地缓存
         // eslint-disable-next-line
         if (localStorage.getItem("list") == undefined) {
@@ -176,9 +181,6 @@ class G6Html2 extends Component {
 
         } else {
             list = JSON.parse(localStorage.getItem("list"))
-            document.getElementById('cSize').value = list.nodes[2].size
-            document.getElementById('cText').value = list.nodes[2].label
-            document.getElementById('lText').value = list.edges[1].label
         }
 
         graph.data(list);  // 加载数据
@@ -212,39 +214,43 @@ class G6Html2 extends Component {
     }
 
     /**
-     * 改变节点的大小
-     */
-    // changeSize() {
-    //     let circleSize = this.state.initData;
-    //     circleSize.nodes[2].size = document.getElementById('cSize').value;
-    //     this.setState({
-    //         initData: circleSize
-    //     })
-    //     this.getCanvas();
-    // }
-
-    /**
-     * 改变节点上的文字 改变线上的文字
-     */
-    // changeText() {
-    //     let text = this.state.initData;
-    //     text.nodes[2].label = document.getElementById('cText').value;
-    //     text.edges[1].label = document.getElementById('lText').value;
-    //     this.setState({
-    //         initData: text
-    //     });
-    //     this.getCanvas();
-    // }
-
-    /**
      * 提交按钮
      * 改变节点大小 节点文字 线上文字
      */
     changeHandle() {
         let allValue = this.state.initData;
-        allValue.nodes[2].size = document.getElementById('cSize').value;
-        allValue.nodes[2].label = document.getElementById('cText').value;
-        allValue.edges[1].label = document.getElementById('lText').value;
+
+        //组建新的节点
+        //距离需要++
+
+        let number = allValue.edges[allValue.edges.length - 1].source.substring(4)
+        number = parseInt(number)
+        let addEdges = {
+            id: 'edge' + (number + 1),
+            label: document.getElementById('lText').value,
+            target: 'node' + (number + 2),  // 起始点 id
+            source: 'node' + (number + 1),  // 目标点 id
+        }
+        // console.log(document.getElementById('lText').value)
+
+        let x = allValue.nodes[allValue.nodes.length - 1].x
+        x = x + 100
+
+        // console.log(document.getElementById('cSize').value)
+        // console.log(document.getElementById('cText').value)
+
+        let addNodes = {
+            size: document.getElementById('cSize').value,
+            label: document.getElementById('cText').value,
+            id: 'node' + (number + 2),
+            type: this.state.selectorTypeText,
+            x: x,
+            y: 200,
+            // size: 50,
+        }
+
+        allValue.nodes.push(addNodes)
+        allValue.edges.push(addEdges)
         localStorage.setItem("list", JSON.stringify(allValue))
 
         this.setState({
@@ -252,7 +258,12 @@ class G6Html2 extends Component {
         });
         this.getCanvas();
     }
+    isRotate() {
 
+        this.setState({
+            selectorTypeText: document.getElementById("selectorType").value
+        })
+    }
     render() {
         return <div className="mt-G62-page">
             <form method="get">
@@ -273,11 +284,13 @@ class G6Html2 extends Component {
 
                     <p>
                         <span>请选择节点类型</span>
-                        <select id="selector">
-                            <option value="default">默认(圆形)</option>
-                            <option value="addNode">椭圆</option>
-                            <option value="addEdge">矩形</option>
-                            <option value="delNode">菱形</option>
+                        <select id="selectorType" onChange={() => this.isRotate()} >
+                            <option value="defaultCircular">默认(圆形)</option>
+                            <option value="ellipse">椭圆</option>
+                            <option value="rect">矩形</option>
+                            <option value="diamond">菱形</option>
+                            <option value="triangle">三角形</option>
+                            <option value="star">五角星形</option>
                         </select>
                     </p>
                     <p className="mt-sub-btn"><span><input type="button" value="Submit" className="subBtn" onClick={() => this.changeHandle()} /></span></p>
