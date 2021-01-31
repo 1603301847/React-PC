@@ -67,7 +67,7 @@ class stepHtml extends Component {
                         <div className="mt-steps-head">
                             <div className={`mt-steps-head-inner ${this.state.cur === index ? 'mt-steps-head-inner-focus' : ''}`}>
                                 <span>{data.num}</span>
-                                <i className="iconfont icon-icon-test"></i> 
+                                <i className="iconfont iconicon-test"></i> 
                             </div>
                         </div>
                         <div className="mt-steps-main">

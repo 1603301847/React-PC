@@ -71,10 +71,10 @@ class TabsHtml extends Component {
         return <div className="mt-tabs-page">
             <div className="mt-tabs-nav-container">
                 <span className="mt-tabs-nav-prev" onClick={() => this.toLeftClick()}>
-                    <i className="iconfont icon-jiantou-zuo"></i>
+                    <i className="iconfont iconjiantou-zuo"></i>
                 </span>
                 <span className="mt-tabs-nav-next" onClick={() => this.toRightClick()}>
-                    <i className="iconfont icon-jiantou-you"></i>
+                    <i className="iconfont iconjiantou-you"></i>
                 </span>
                 <div className="mt-tabs-nav-scroll">
                     <ul className="mt-tabs-ink-bar">

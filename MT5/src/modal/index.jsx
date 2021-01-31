@@ -58,7 +58,7 @@ class ModalHtml extends Component {
                 onClick={() => this.hideModal()}></div>
             <div className="mt-modal-wrap" style={{ display: (isShow === false) ? "block" : "none" }}>
                 <div className="mt-modal">
-                    <i className=" iconfont icon-guanbianniu mt-modal-close" onClick={() => this.hideModal()}></i>
+                    <i className=" iconfont iconguanbianniu mt-modal-close" onClick={() => this.hideModal()}></i>
                     <div className="mt-modal-header">
                         <div className="mt-modal-header-inner">普通的Modal对话框标题</div>
                     </div>
@@ -75,7 +75,7 @@ class ModalHtml extends Component {
                 </div>
             </div>
             <div className="mt-modal-message" id="mt-modal-message">
-                <i className="iconfont icon-gantanhao"></i>
+                <i className="iconfont icongantanhao"></i>
                 <span>{text}</span>
             </div>
         </div>;

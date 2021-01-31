@@ -126,8 +126,8 @@ class SelectHtml extends Component {
                     onMouseOver={() => this.hoverShowDel()}
                     onMouseOut={() => this.outHideDel()}
                     >{this.state.msg}</span>
-                    <i className="iconfont icon-shanchu4 mt-icon-del" onClick={() => this.clearClick()} onMouseOut={() => this.hiddenDelIconClick()} style={{ display: (false === isDisabled) ? "block" : "none" }} ></i>
-                    <i className="iconfont icon-jiantou-copy-copy mt-icon-jiantou" onMouseOver={() => this.showDelIconClick()} style={{ display: (true === isDisabled) ? "block" : "none" }}></i>
+                    <i className="iconfont iconshanchu4 mt-icon-del" onClick={() => this.clearClick()} onMouseOut={() => this.hiddenDelIconClick()} style={{ display: (false === isDisabled) ? "block" : "none" }} ></i>
+                    <i className="iconfont iconjiantou-copy-copy mt-icon-jiantou" onMouseOver={() => this.showDelIconClick()} style={{ display: (true === isDisabled) ? "block" : "none" }}></i>
 
                 </div>
                 <div className={`mt-select-dropdown ${select ? "select" : ""}`} >

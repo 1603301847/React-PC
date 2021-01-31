@@ -25,15 +25,15 @@ class LoginHtml extends Component{
         return <div className="mt-login-page">
             <div className="mt-login-page-container">
                 <div className="mt-login-page-camera">
-                    <i className="iconfont icon-xiangji"></i>
+                    <i className="iconfont iconxiangji"></i>
                 </div>
 
                 <div className="mt-login-page-user-msg">
-                    <i className="iconfont icon-new-yonghu"></i> 
+                    <i className="iconfont iconnew-yonghu"></i> 
                     <input type="text" />
                 </div>
                 <div className="mt-login-page-pwd-msg">
-                    <i className="iconfont icon-mima"></i>
+                    <i className="iconfont iconmima"></i>
                     <input type="password" />
                 </div>
                 <div className="mt-login-page-btn">

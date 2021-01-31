@@ -20,6 +20,7 @@ class splitHtml extends Component {
         var event = e || window.event;
         var x = event.clientX - trigger.offsetLeft;
 
+
         /**
          * 
          * @param {*} e 事件鼠标移动时发生
@@ -28,7 +29,7 @@ class splitHtml extends Component {
             var event = e || window.event;
             trigger.style.left = event.clientX - x + 'px';
             left.style.width = event.clientX - x + 'px';
-            right.style.width = wrapper.clientWidth - event.clientX + x + 'px';
+            right.style.width = wrapper.clientWidth - event.clientX - 1 + x + 'px';
 
             if(event.clientX <= 260) {
                 trigger.style.left = "35px"

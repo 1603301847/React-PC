@@ -43,10 +43,10 @@ class sliderHtml extends Component {
                 <div className="mt-input-number">
                     <div className="mt-input-number-handler-wrap">
                         <span className="mt-input-number-handler">
-                            <i className="iconfont icon-jiantou mt-input-number-icon" onClick={() => this.handleAdd()}></i>
+                            <i className="iconfont iconjiantou1 mt-input-number-icon" onClick={() => this.handleAdd()}></i>
                         </span>
                         <span className="mt-input-number-handler">
-                            <i className="iconfont icon-jiantou1 mt-input-number-icon" onClick={() => this.handleReduce()}></i>
+                            <i className="iconfont iconjiantou11 mt-input-number-icon" onClick={() => this.handleReduce()}></i>
                         </span>
                     </div>
                     <div className="mt-input-number-input-wrap">

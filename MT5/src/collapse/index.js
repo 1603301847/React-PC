@@ -21,7 +21,7 @@ class CollapseHtml extends Component {
     //     var collapseContent = document.querySelectorAll('.mt-ivu-collapse-content');
     //     console.log(collapseContent);
 
-    //     var collapseIcon = document.getElementsByClassName("icon-zhediejiantou");
+    //     var collapseIcon = document.getElementsByClassName("iconzhediejiantou");
     //     for (let i = 0; i < collapseHeader.length; i++) {
     //         collapseHeader[i].onclick = function () {
     //             console.log(collapseContent[i].className)
@@ -30,7 +30,7 @@ class CollapseHtml extends Component {
     //             } else {
     //                 collapseContent[i].classList.remove("auto");
     //             }
-    //             if (collapseIcon[i].className == 'iconfont icon-zhediejiantou') {
+    //             if (collapseIcon[i].className == 'iconfont iconzhediejiantou') {
     //                 collapseIcon[i].classList.add("rotate");
     //             } else {
     //                 collapseIcon[i].classList.remove("rotate");
@@ -66,7 +66,7 @@ class CollapseHtml extends Component {
                 <div className="mt-ivu-collapse">
                     <div className={`mt-ivu-collapse-item ${openMap.key1 ? "open" : ''}`}>
                         <div className="mt-ivu-collapse-header" onClick={() => this.handleCollapse("key1")}>
-                            <i className="iconfont icon-zhediejiantou"></i>
+                            <i className="iconfont iconzhediejiantou"></i>
                             史蒂夫·乔布斯
                         </div>
                         <div className="mt-ivu-collapse-content">
@@ -77,7 +77,7 @@ class CollapseHtml extends Component {
                     </div>
                     <div className={`mt-ivu-collapse-item ${openMap.key2 ? "open" : ''}`}>
                         <div className="mt-ivu-collapse-header" onClick={() => this.handleCollapse("key2")}>
-                            <i className="iconfont icon-zhediejiantou"></i>
+                            <i className="iconfont iconzhediejiantou"></i>
                             斯蒂夫·盖瑞·沃兹尼亚克
                         </div>
                         <div className="mt-ivu-collapse-content">
@@ -88,7 +88,7 @@ class CollapseHtml extends Component {
                     </div>
                     <div className={`mt-ivu-collapse-item ${openMap.key3 ? "open" : ''}`}>
                         <div className="mt-ivu-collapse-header" onClick={() => this.handleCollapse("key3")}>
-                            <i className="iconfont icon-zhediejiantou"></i>
+                            <i className="iconfont iconzhediejiantou"></i>
                             乔纳森·伊夫
                         </div>
                         <div className="mt-ivu-collapse-content">

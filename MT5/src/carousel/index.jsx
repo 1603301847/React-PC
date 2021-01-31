@@ -122,7 +122,7 @@ class CarouselHtml extends Component {
             <button onClick={() => this.stopClick()}>停止自动轮播</button>
             <div className="mt-carousel" onMouseOver={() => this.showArrow()} onMouseOut={() => this.hideArrow()}>
                 <button type="button" className="mt-left-carousel-arrow" style={{ display: (true === isShow) ? "block" : "none" }} onClick={() => this.switchPrev(cur)}>
-                    <i className="iconfont icon-jiantou-zuo"></i>
+                    <i className="iconfont iconjiantou-zuo"></i>
                 </button>
 
                 <div className="mt-carousel-list">
@@ -151,7 +151,7 @@ class CarouselHtml extends Component {
                 </ul>
                 {/* eslint-disable-next-line */}
                 <button type="button" className="mt-right-carousel-arrow" style={{ display: (true == isShow) ? "block" : "none" }} onClick={() => this.switchNext(cur)}>
-                    <i className="iconfont icon-jiantou-you"></i>
+                    <i className="iconfont iconjiantou-you"></i>
                 </button>
             </div>
         </div>;

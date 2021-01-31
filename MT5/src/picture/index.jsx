@@ -24,13 +24,14 @@ class ComputedHTML11 extends Component {
 
         let imgList=[];
 
-        if( direction === 'ImageUp'){
+        if (direction === 'ImageUp') {
+            // eslint-disable-next-line
             var requireComponent = require.context(
                 './ImageUp',
                 false,
                 // /global[A-Z]\w+\.(vue|js)$/
             );
-        } else{
+        } else {
             // eslint-disable-next-line
             var requireComponent = require.context(
                 './ImageDown',
@@ -39,7 +40,7 @@ class ComputedHTML11 extends Component {
             );
         }
 
-        // eslint-disable-next-line        
+        // eslint-disable-next-line
         requireComponent.keys().map(fileName => {
             imgList.push(fileName.slice(2));
         });

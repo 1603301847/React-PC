@@ -69,16 +69,16 @@ class ProgressHtml extends Component {
                 <span className="mt-progress-text">
                     <span className="mt-progress-text-inner">
                         <span style={{ display: isShow ? 'none' : 'block' }}>{this.state.num + '%'}</span>
-                        <i className="iconfont icon-dh" style={{ display: isShow ? 'block' : 'none' }}></i>
+                        <i className="iconfont icondh" style={{ display: isShow ? 'block' : 'none' }}></i>
                     </span>
                 </span>
             </div>
             <div className="mt-progress-btn-group">
                 <button type="button" className="mt-progress-btn" onClick={() => this.handleClickAdd()}>
-                    <i className="iconfont icon-jia"></i>
+                    <i className="iconfont iconjia"></i>
                 </button>
                 <button type="button" className="mt-progress-btn" onClick={() => this.handleClickReduce()}>
-                    <i className="iconfont icon-jianh"></i>
+                    <i className="iconfont iconjianh"></i>
                 </button>
             </div>
         </div>;

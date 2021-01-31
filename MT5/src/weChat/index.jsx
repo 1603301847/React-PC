@@ -60,7 +60,7 @@ class weChatHtml extends Component {
             ],
             tabList: [
                 {
-                    icon: '\ue603',
+                    icon: '\ue607',
                     iconName: '消息',
                 },
                 {
@@ -72,7 +72,7 @@ class weChatHtml extends Component {
                     iconName: '发现',
                 },
                 {
-                    icon: '\ue500',
+                    icon: '\ue603',
                     iconName: '我',
                 }
             ]
@@ -317,10 +317,10 @@ class weChatHtml extends Component {
                     <span className="mt-weChat-header-name">微信</span>
                     <span><input type="text" className="mt-weChat-header-ipt" ref={(input) => { this.ipt = input }} /></span>
                     <span className="mt-weChat-header-add" onClick={() => this.handleAdd()}>
-                        <i className="iconfont icon-plus"></i>
+                        <i className="iconfont iconplus"></i>
                     </span>
                     <span className="mt-weChat-header-search" onClick={() => this.handleClick()}>
-                        <i className="iconfont icon-weixinsousuo"></i>
+                        <i className="iconfont iconweixinsousuo"></i>
                     </span>
                 </div>
                 <div className="mt-weChat-content">
@@ -345,7 +345,7 @@ class weChatHtml extends Component {
                                 {/* eslint-disable-next-line  */}
                                 <span className="mt-weChat-contact-topping" onClick={() => this.isTop(index)}>{data.iSort == 0 ? "置顶" : "取消置顶"}</span>
                                 <span className="mt-weChat-contact-close" onClick={() => this.handleClear(data.id)}>
-                                    <i className="iconfont icon-guanbianniu mt-weChat-contact-del"></i>
+                                    <i className="iconfont iconguanbianniu mt-weChat-contact-del"></i>
                                 </span>
                             </div>
                         </div>)}
@@ -363,7 +363,7 @@ class weChatHtml extends Component {
                 </div>
                 <div className="mt-weChat-popup" style={{ display: pop ? 'block' : 'none' }}>
                     <div className="mt-weChat-popup-con">
-                        <i className=" iconfont icon-guanbianniu mt-weChat-popup-close" onClick={() => this.hideModal()}></i>
+                        <i className=" iconfont iconguanbianniu mt-weChat-popup-close" onClick={() => this.hideModal()}></i>
                         <form method="get" className="mt-weChat-popup-form">
                             <p>
                                 <span style={{ color: 'red' }}>*</span>

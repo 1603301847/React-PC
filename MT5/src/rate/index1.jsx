@@ -77,7 +77,7 @@ class RatePage extends Component {
                         onClick={() => this.addColorClick(key)}
                         onMouseOver={() => this.hoverColorClick(key)}
                         onMouseOut={() => this.hoverOutColorClick(key)}
-                    ><i className="iconfont icon-xingxing"></i></li>)
+                    ><i className="iconfont iconxingxing"></i></li>)
                 }
 
             </ul>

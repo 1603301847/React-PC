@@ -29,6 +29,8 @@
             cursor:col-resize;
             position: absolute;
             left: 50%;
+            // margin-left: -3px;
+            box-sizing: border-box;
             z-index: 1;
             background-color: #F8F8F9;
         }

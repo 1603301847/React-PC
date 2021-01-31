@@ -161,7 +161,7 @@ class TreeHtml extends Component {
                     <li className="mt-tree-list">
                         <span className={`mt-tree-arrow ${rotate ? 'rotate' : ''}`}
                             onClick={() => this.hideAllList()}>
-                            <i className="iconfont icon-jiantou-copy-copy mt-tree-icon"></i>
+                            <i className="iconfont iconjiantou-copy-copy mt-tree-icon"></i>
                         </span>
                         <label className="mt-tree-checkbox-item">
                             <span className="mt-tree-checkbox">
@@ -180,7 +180,7 @@ class TreeHtml extends Component {
                                 <span
                                     className={`mt-tree-arrow ${data.open ? '' : 'rotate'}`}>
                                     <i
-                                        className="iconfont icon-jiantou-copy-copy mt-tree-icon"
+                                        className="iconfont iconjiantou-copy-copy mt-tree-icon"
                                         onClick={() => this.hideChildList(index)}></i>
                                 </span>
                                 <label className="mt-tree-checkbox-item">
