@@ -8,14 +8,15 @@ class SelectHtml extends Component {
             select: false,
             msg: '请选择',
             data: [{ text: "New York" }, { text: "London" }, { text: "Sydney" }, { text: "Ottawa" }, { text: "Paris" }, { text: "Canberra" }],
-            isDisabled: true
+            isDisabled: true,
+            currentClick: ""
         }
     }
 
     /***
      * 点击下拉框隐藏下拉框
      */
-    getDataClick (data) {
+    getDataClick(data) {
         // console.log(data)
         this.setState({
             msg: data.text,
@@ -26,17 +27,15 @@ class SelectHtml extends Component {
     /**
      * 点击输入框显示下拉框
      */
-    selectClick () {
+    selectClick(e) {
         // eslint-disable-next-line
-        if(this.state.select == false) {
-            this.setState({
-                select: true
-            })
-        } else {
-            this.setState({
-                select: false
-            })
-        }
+        console.log(this)
+        this.setState({
+            select: !this.state.select,
+            currentClick: e.target
+        })
+        console.log(e.target)
+
     }
 
     /***
@@ -44,7 +43,7 @@ class SelectHtml extends Component {
      */
     hoverShowDel() {
         // eslint-disable-next-line
-        if(this.state.msg != '请选择') {
+        if (this.state.msg != '请选择') {
             this.setState({
                 isDisabled: false
             })
@@ -56,7 +55,7 @@ class SelectHtml extends Component {
      */
     outHideDel() {
         // eslint-disable-next-line
-        if(this.state.msg != '请选择') {
+        if (this.state.msg != '请选择') {
             this.setState({
                 isDisabled: true
             })
@@ -66,7 +65,7 @@ class SelectHtml extends Component {
     /**
      * 鼠标点击删除按钮清空输入框
      */
-    clearClick () {
+    clearClick() {
         this.setState({
             msg: "请选择",
             isDisabled: true
@@ -76,7 +75,7 @@ class SelectHtml extends Component {
     /**
      * 鼠标划出显示图标
      */
-    showDelIconClick () {
+    showDelIconClick() {
         this.setState({
             isDisabled: false
         })
@@ -85,13 +84,13 @@ class SelectHtml extends Component {
     /**
      * 鼠标划出隐藏图标
      */
-    hiddenDelIconClick () {
+    hiddenDelIconClick() {
         this.setState({
             isDisabled: true
         })
     }
 
-    handleClick (e) {
+    handleClick(e) {
         //点击空白处，清空
         // e.nativeEvent.stopImmediatePropagation()
 
@@ -100,31 +99,50 @@ class SelectHtml extends Component {
 
         //只有点击当前触发事件的元素才可以触发关闭
         // eslint-disable-next-line
-        if (e.target == e.currentTarget) {
 
+        if (e.target == e.currentTarget) {
             this.setState({
                 select: false
             })
+        }
+    }
 
+    /**
+     * 监听关闭弹窗方法
+     */
+    closeModal(e) {
+        let that = this
+        console.log(e.target)
+        if (e.target != that.state.currentClick) {
+            if (that.state.select) {
+                that.setState({
+                    select: false
+                })
+            }
         }
     }
     
-    render () {
+    componentDidMount() {
+        let that = this
+        window.addEventListener('click', (e) => that.closeModal(e))
+    }
+
+    render() {
 
         let { data } = this.state;
         let { select } = this.state;
         let { isDisabled } = this.state;
 
-        return <div className="mt-select-page" onMouseDown={(e) => this.handleClick(e)} >
+        return <div className="mt-select-page">
             <div className={`mt-select ${select ? "select" : ""}`}>
                 <div className="mt-select-selection" >
 
                     <input type="hidden" value={this.state.msg} />
                     {/* eslint-disable-next-line */}
-                    <span className={`mt-select-placeholder ${this.state.msg == '请选择' ? "mt-select-placeholder" : "active"}`} 
-                    onClick={() => this.selectClick()} 
-                    onMouseOver={() => this.hoverShowDel()}
-                    onMouseOut={() => this.outHideDel()}
+                    <span className={`mt-select-placeholder ${this.state.msg == '请选择' ? "mt-select-placeholder" : "active"}`}
+                        onClick={(e) => this.selectClick(e)}
+                        onMouseOver={() => this.hoverShowDel()}
+                        onMouseOut={() => this.outHideDel()}
                     >{this.state.msg}</span>
                     <i className="iconfont iconshanchu4 mt-icon-del" onClick={() => this.clearClick()} onMouseOut={() => this.hiddenDelIconClick()} style={{ display: (false === isDisabled) ? "block" : "none" }} ></i>
                     <i className="iconfont iconjiantou-copy-copy mt-icon-jiantou" onMouseOver={() => this.showDelIconClick()} style={{ display: (true === isDisabled) ? "block" : "none" }}></i>
@@ -143,4 +161,4 @@ class SelectHtml extends Component {
     }
 }
 
-export default SelectHtml; 
+export default SelectHtml;
